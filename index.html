@@ -14,7 +14,7 @@
   </head>
   <body>
     <!-- header -->
-    <header>
+    <header class="header">
       <div class="container">
         <div class="container-header">
           <nav class="header-nav">
@@ -40,21 +40,21 @@
               <ul class="social-media-items">
                 <li>
                   <a href="tel:+380960000007" target="_blank">
-                    <svg width="24" height="24">
+                    <svg class="header-icon" width="24" height="24">
                       <use href="./images/icons.svg#icon-telephone"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a href="https://www.facebook.com/" target="_blank">
-                    <svg width="24" height="24">
+                    <svg class="header-icon" width="24" height="24">
                       <use href="./images/icons.svg#icon-facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a href="https://www.instagram.com/" target="_blank">
-                    <svg width="24" height="24">
+                    <svg class="header-icon" width="24" height="24">
                       <use href="./images/icons.svg#icon-instagram"></use>
                     </svg>
                   </a>
@@ -74,7 +74,9 @@
             beauty <br />
             zone
           </h1>
-          <button class="button-primary" type="button">Замовити дзвінок</button>
+          <button class="button-primary modal-btn-open" type="button">
+            Замовити дзвінок
+          </button>
           <p class="hero-text">
             Запишись та отримай безкоштовну <br />
             консультацію нашого косметолога
@@ -102,7 +104,7 @@
           <div class="descr-img-container">
             <img
               class="face-img face-before"
-              src="/images/face-before.jpg"
+              src="./images/face-before.jpg"
               alt="Обличчя до процедури"
             />
             <svg class="star1 star" width="64" height="64">
@@ -116,7 +118,7 @@
             </svg>
             <img
               class="face-img face-after"
-              src="/images/face-after.jpg"
+              src="./images/face-after.jpg"
               alt="Обличчя після процедури"
             />
           </div>
@@ -177,15 +179,32 @@
                 <use href="./images/icons.svg#icon-arrow-left"></use>
               </svg>
             </button>
-            <img
-              src="/images/face-mask.jpg"
-              alt="Нанесення маски для обличчя"
-            />
-            <img
-              src="/images/face-injection.jpg"
-              alt="Введення препарату в обличчя"
-            />
-            <img src="/images/face-clean.jpg" alt="Чистка обличчя" />
+            <ul class="our-work-list">
+              <li class="our-work-item">
+                <article class="our-work-card">
+                  <h3>Маски <br />для обличчя</h3>
+                  <img
+                    src="./images/face-mask.jpg"
+                    alt="Нанесення маски для обличчя"
+                  />
+                </article>
+              </li>
+              <li class="our-work-item">
+                <article class="our-work-card">
+                  <h3>Ін'єкції <br />для обличчя</h3>
+                  <img
+                    src="./images/face-injection.jpg"
+                    alt="Введення препарату в обличчя"
+                  />
+                </article>
+              </li>
+              <li class="our-work-item">
+                <article class="our-work-card">
+                  <h3>Чистка <br />обличчя</h3>
+                  <img src="./images/face-clean.jpg" alt="Чистка обличчя" />
+                </article>
+              </li>
+            </ul>
             <button type="button" class="carousel-button">
               <svg width="16" height="16">
                 <use href="./images/icons.svg#icon-arrow-right"></use>
@@ -200,16 +219,77 @@
           <h2 class="section-title contacts-title">
             Як нас <span class="accent">знайти</span>
           </h2>
-          <iframe
-            class="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1066.8913444418372!2d30.775021671505225!3d50.50608508840642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d97de411b701%3A0x48116b28f7f00d94!2z0YPQuy4g0KLQsNGA0LDRgdCwINCo0LXQstGH0LXQvdC60L4sIDUsINCR0YDQvtCy0LDRgNGLLCDQmtC40LXQstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAwNzQwMA!5e0!3m2!1sru!2sua!4v1740682240857!5m2!1sru!2sua"
-            width="605"
-            height="481"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <div class="contacts-container">
+            <iframe
+              class="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1066.8913444418372!2d30.775021671505225!3d50.50608508840642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d97de411b701%3A0x48116b28f7f00d94!2z0YPQuy4g0KLQsNGA0LDRgdCwINCo0LXQstGH0LXQvdC60L4sIDUsINCR0YDQvtCy0LDRgNGLLCDQmtC40LXQstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAwNzQwMA!5e0!3m2!1sru!2sua!4v1740682240857!5m2!1sru!2sua"
+              width="605"
+              height="481"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div class="form-container">
+              <p class="modal-text">
+                Запишіться <span>безкоштовно</span> <br />
+                та отримайте подарунок
+              </p>
+              <form name="contact-form" autocomplete="off">
+                <div class="form-field on-contact">
+                  <label for="user-name" class="form-label hidden">
+                    Ваше ім'я та прізвище
+                  </label>
+                  <input
+                    type="text"
+                    name="user-name"
+                    id="user-name"
+                    class="form-input"
+                    placeholder="Ваше ім'я та прізвище"
+                    pattern="^[А-ЩЬЮЯҐЄIІЇ][а-щьюяґєії']+\s[А-ЩЬЮЯҐЄIІЇ][а-щьюяґєії']+$"
+                    required
+                  />
+                </div>
+                <div class="form-field on-contact">
+                  <label for="user-tel" class="form-label hidden"
+                    >Ваш номер телефону</label
+                  >
+                  <input
+                    type="tel"
+                    name="user-tel"
+                    id="user-tel"
+                    class="form-input"
+                    placeholder="Ваш номер телефону"
+                    pattern="\+380\d{9}"
+                    required
+                  />
+                </div>
+                <div class="form-field on-contact">
+                  <label for="user-email" class="form-label hidden">
+                    Ваша електронна пошта
+                  </label>
+                  <input
+                    type="email"
+                    name="user-email"
+                    id="user-email"
+                    class="form-input"
+                    placeholder="Ваша електронна пошта"
+                    pattern="@"
+                    required
+                  />
+                </div>
+                <button type="submit" class="button-primary form-button">
+                  Записатись безкоштовно
+                </button>
+                <p class="form-term">
+                  Натискаючи на кнопку я погоджуюсь
+                  <a href="#" class="form-term-link"
+                    >з політикою конфіденційності</a
+                  >
+                </p>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -291,5 +371,67 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop">
+      <div class="modal">
+        <button class="modal-btn-close" type="button">X</button>
+        <h2 class="modal-title">Замовити дзвінок</h2>
+        <p class="modal-text">
+          Запишіться <span>безкоштовно</span> <br />
+          та отримайте подарунок
+        </p>
+        <form name="modal-form" autocomplete="off">
+          <div class="form-field">
+            <label for="user-name" class="form-label hidden">
+              Ваше ім'я та прізвище
+            </label>
+            <input
+              type="text"
+              name="user-name"
+              id="user-name"
+              class="form-input"
+              placeholder="Ваше ім'я та прізвище"
+              pattern="^[А-ЩЬЮЯҐЄIІЇ][а-щьюяґєії']+\s[А-ЩЬЮЯҐЄIІЇ][а-щьюяґєії']+$"
+              required
+            />
+          </div>
+          <div class="form-field">
+            <label for="user-tel" class="form-label hidden"
+              >Ваш номер телефону</label
+            >
+            <input
+              type="tel"
+              name="user-tel"
+              id="user-tel"
+              class="form-input"
+              placeholder="Ваш номер телефону"
+              pattern="\+380\d{9}"
+              required
+            />
+          </div>
+          <div class="form-field">
+            <label for="user-email" class="form-label hidden">
+              Ваша електронна пошта
+            </label>
+            <input
+              type="email"
+              name="user-email"
+              id="user-email"
+              class="form-input"
+              placeholder="Ваша електронна пошта"
+              pattern="@"
+              required
+            />
+          </div>
+          <button type="submit" class="button-primary form-button">
+            Записатись безкоштовно
+          </button>
+          <p class="form-term">
+            Натискаючи на кнопку я погоджуюсь
+            <a href="#" class="form-term-link">з політикою конфіденційності</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
