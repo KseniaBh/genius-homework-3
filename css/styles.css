@@ -346,6 +346,7 @@ ul {
   background-image: url(../images/background-footer.png);
   padding: 56px 0;
   position: relative;
+  transition: fill 0.2s;
 }
 .footer-container {
   display: flex;
@@ -357,7 +358,7 @@ ul {
   gap: 188px;
 }
 footer p {
-  color: var(--color-secondary-light);
+  color: var(--secondary-color);
   font-size: 13px;
   font-weight: 400;
 }
@@ -367,6 +368,7 @@ footer p {
   font-weight: 400;
   font-family: inherit;
   text-decoration: none;
+  transition: color 0.2s;
 }
 .link-footer:hover,
 .link-footer:focus,
@@ -385,7 +387,7 @@ footer p {
   height: 42px;
 }
 .footer-icon:hover {
-  fill: var(--white-color);
+  fill: var(--main-brand-color-light);
   transition: fill 0.2s;
 }
 
