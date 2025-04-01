@@ -14,6 +14,11 @@ body {
   font-weight: 400;
   font-size: 18px;
   margin: 0;
+
+  background-image: url(../images/background-why-us.png);
+  background-position: center 1424px;
+  background-repeat: no-repeat;
+  width: 100%;
 }
 h1,
 h2,
@@ -47,6 +52,7 @@ ul {
 .header {
   position: absolute;
   width: 100%;
+  backdrop-filter: blur(10px);
 }
 .container-header {
   display: flex;
@@ -92,6 +98,9 @@ ul {
 }
 
 /* hero section */
+.container-hero {
+  padding-left: 106px;
+}
 
 .hero-section {
   padding: 123px 0 126px;
@@ -181,38 +190,35 @@ ul {
   fill: var(--main-brand-color-dark);
   top: 355px;
   left: 140px;
-  animation: rotateAndMove 10s linear infinite;
+  animation: pulsing 2s infinite;
 }
 
 .star2 {
   fill: var(--main-brand-color-light);
   top: 30px;
   right: 0;
-  animation: rotateAndMove 10s linear infinite;
-  animation-delay: 2s;
+  animation: pulsing 2s infinite;
 }
 
 .star3 {
   fill: var(--secondary-color);
   top: 260px;
   right: 40px;
-  animation: rotateAndMove 10s linear infinite;
-  animation-delay: 4s;
+  animation: pulsing 2s infinite;
 }
 
-@keyframes rotateAndMove {
-  0%,
-  100% {
-    transform: rotate(0deg) translateX(100px) rotate(0deg);
-  }
-  25% {
-    transform: rotate(90deg) translateX(100px) rotate(-90deg);
+@keyframes pulsing {
+  0% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
   }
   50% {
-    transform: rotate(180deg) translateX(100px) rotate(-180deg);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
   }
-  75% {
-    transform: rotate(270deg) translateX(100px) rotate(-270deg);
+  100% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
   }
 }
 
@@ -235,6 +241,7 @@ ul {
   box-shadow: 0px 4px 4px 0px rgba(168, 198, 245, 0.38);
   border-radius: 32px;
   text-align: center;
+  background-color: var(--white-color);
 }
 .advantages-icon {
   fill: var(--main-brand-color-light);
@@ -277,27 +284,22 @@ ul {
 .our-work-list {
   display: flex;
   gap: 16px;
-  /* flex-wrap: nowrap; */
-  flex-wrap: wrap;
-  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .our-work-item {
-  display: flex;
-  flex-basis: calc((100% - 32px) / 3);
+  width: 100%;
+  height: 100%;
 }
 .our-work-card {
   border-radius: 120px 4px;
-  background: linear-gradient(
-    180deg,
-    rgba(1, 28, 68, 0) 48.53%,
-    rgba(1, 28, 68, 0.73) 84.61%,
-    #011c44 101.39%
-  );
+
   overflow: hidden;
   position: relative;
   transition: transform 0.2s;
-  flex-grow: 1;
+  height: 456px;
+  max-width: 344px;
 }
 
 .our-work-card:hover {
@@ -310,6 +312,33 @@ ul {
   left: 30%;
   text-align: center;
   color: var(--white-color);
+}
+.proc-card-1 {
+  background: linear-gradient(
+      180.05deg,
+      rgba(1, 28, 68, 0) 48.53%,
+      rgba(1, 28, 68, 0.73) 84.61%,
+      #011c44 101.39%
+    ),
+    url('../images/face-mask.jpg');
+}
+.proc-card-2 {
+  background: linear-gradient(
+      180.05deg,
+      rgba(1, 28, 68, 0) 48.53%,
+      rgba(1, 28, 68, 0.73) 84.61%,
+      #011c44 101.39%
+    ),
+    url('../images/face-injection.jpg');
+}
+.proc-card-3 {
+  background: linear-gradient(
+      180.05deg,
+      rgba(1, 28, 68, 0) 48.53%,
+      rgba(1, 28, 68, 0.73) 84.61%,
+      #011c44 101.39%
+    ),
+    url('../images/face-clean.jpg');
 }
 /* contacts-section */
 .contacts-section {
